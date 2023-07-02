@@ -1,6 +1,5 @@
 <script lang="ts">
 	import LetterLink from '$lib/LetterLink.svelte';
-	import Letter from '../lib/Letter.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 </script>

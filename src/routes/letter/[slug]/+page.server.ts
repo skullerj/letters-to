@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { getPage } from '$lib/notion';
+import { getPage } from '$lib/api/notion';
 import { error } from '@sveltejs/kit';
 
 export const load = (async ({ params }) => {
