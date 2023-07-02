@@ -5,6 +5,10 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Cartas a una Isbella</title>
+</svelte:head>
+
 <div class="w-full flex flex-col items-center">
 	{#each data.letters as letter}
 		<a href={`/letter/${letter.id}`}>

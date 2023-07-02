@@ -6,15 +6,17 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>{data.page.title}</title>
+</svelte:head>
+
 <Card class="m-auto">
-	{#if data?.page}
-		<h2>{data.page.title}</h2>
-		<side class="text-end mb-2 md:mb-4">{formatDate(data.page.date)}</side>
-		{#each data.page.blocks as block}
-			{#if block.type === 'paragraph' && block.content}
-				<p>{block.content}</p>
-			{/if}
-		{/each}
-	{/if}
+	<h2>{data.page.title}</h2>
+	<side class="text-end mb-2 md:mb-4">{formatDate(data.page.date)}</side>
+	{#each data.page.blocks as block}
+		{#if block.type === 'paragraph' && block.content}
+			<p>{block.content}</p>
+		{/if}
+	{/each}
 	<p class="mx-3">- Juan</p>
 </Card>
