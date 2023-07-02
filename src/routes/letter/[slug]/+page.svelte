@@ -10,7 +10,7 @@
 	<title>{data.page.title}</title>
 </svelte:head>
 
-<Card class="m-auto">
+<Card class="m-auto mt-8">
 	<h2>{data.page.title}</h2>
 	<side class="text-end mb-2 md:mb-4">{formatDate(data.page.date)}</side>
 	{#each data.page.blocks as block}

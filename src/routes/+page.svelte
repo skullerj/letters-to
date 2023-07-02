@@ -11,8 +11,6 @@
 
 <div class="w-full flex flex-col items-center">
 	{#each data.letters as letter}
-		<a href={`/letter/${letter.id}`}>
-			<LetterLink title={letter.title} date={letter.date} />
-		</a>
+		<LetterLink title={letter.title} date={letter.date} id={letter.id} />
 	{/each}
 </div>
