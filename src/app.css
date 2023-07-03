@@ -19,5 +19,9 @@ h3 {
 }
 
 p {
-	@apply text-base font-light;
+	@apply font-light text-sm;
+}
+
+side {
+	@apply text-xs font-bold;
 }

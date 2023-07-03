@@ -8,18 +8,20 @@
 	export let date: Date;
 	export let title: string;
 	export let id: string;
-	let stamp = [stamp1, stamp2, stamp3].at(date.getTime() % 3);
+	let stamp = [stamp1, stamp2, stamp3].at(date.getDate() % 3);
 </script>
 
 <Card class="max-w-xl w-full hover:shadow-lg">
 	<a href={`/letter/${id}`}>
-		<p>{formatDate(date)}</p>
-		<div class="flex">
-			<h2 class="flex-1 mr-2 md:mr-4">
-				{title}
-			</h2>
+		<div class="flex min-h-[140px]">
+			<div class="flex flex-col flex-1 mr-2 md:mr-4">
+				<side>{formatDate(date)}</side>
+				<h2 class="flex-1">
+					{title}
+				</h2>
+				<p>De: Juan <br /> Para: Isbella</p>
+			</div>
 			<img src={stamp} class="w-20 h-20 object-contain object-right-top" alt="Post stamp" />
 		</div>
-		<p class="text-end">De: Juan <br /> Para: Isbella</p>
 	</a>
 </Card>

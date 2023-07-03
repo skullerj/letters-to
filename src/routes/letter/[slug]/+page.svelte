@@ -15,8 +15,8 @@
 	<side class="text-end mb-2 md:mb-4">{formatDate(data.page.date)}</side>
 	{#each data.page.blocks as block}
 		{#if block.type === 'paragraph' && block.content}
-			<p>{block.content}</p>
+			<p class="mb-4">{block.content}</p>
 		{/if}
 	{/each}
-	<p class="mx-3">- Juan</p>
+	<p class="mx-3 mb-4">- Juan</p>
 </Card>
