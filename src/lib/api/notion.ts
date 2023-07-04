@@ -7,6 +7,12 @@ const notion = new Client({ auth: NOTION_API_KEY });
 export async function getPages() {
 	const database = await notion.databases.query({
 		database_id: NOTION_DATABSE_ID,
+		filter: {
+			property: 'Visible',
+			checkbox: {
+				equals: true
+			}
+		},
 		sorts: [
 			{
 				property: 'Created',
