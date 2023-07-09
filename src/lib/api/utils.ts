@@ -29,3 +29,12 @@ export function getPageName(page: PageObjectResponse) {
 	}
 	return 'Otra nueva carta';
 }
+
+export function getPageDate(page: PageObjectResponse) {
+	if (page.properties.PublishedAt.type === 'date') {
+		if (page.properties.PublishedAt.date?.start) {
+			return new Date(page.properties.PublishedAt.date.start);
+		}
+	}
+	return new Date(page.created_time);
+}
