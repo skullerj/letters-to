@@ -1,22 +1,15 @@
-# create-svelte
+# Letters To
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This web app allows you to link a Notion database to show a page for each entry.
+The idea is that you are sending letters to someone through Notion and they can receive them in the website.
 
-## Creating a project
+## Dependencies
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This project is buit using Svelte, Tailwind and Typescript.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
@@ -35,4 +28,4 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This repo also includes the neccesary configuration to deploy to Netlify. To do so you just need to create a Github repo, upload your code there and link that repo with Nelify, it should automatically detect that this is an Svelte project.
